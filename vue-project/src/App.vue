@@ -17,6 +17,18 @@ function changeColor() {
 const count = ref(0)
 function increment() { count.value++ }
 
+// [Effect 4] Typewriter Effect
+const fullText = 'Welcome to Vue with Effects!'
+const typewriter = ref('')
+let idx = 0
+function typeEffect() {
+  if (idx < fullText.length) {
+    typewriter.value += fullText[idx++]
+    setTimeout(typeEffect, 100)
+  }
+}
+onMounted(typeEffect)
+
 </script>
 
 <template>
