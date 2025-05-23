@@ -7,6 +7,12 @@ import { ref, onMounted } from 'vue'
 const time = ref(new Date().toLocaleTimeString())
 setInterval(() => { time.value = new Date().toLocaleTimeString() }, 1000)
 
+// [Effect 2] Random Color Box
+const color = ref('#'+Math.floor(Math.random()*16777215).toString(16))
+function changeColor() {
+  color.value = '#'+Math.floor(Math.random()*16777215).toString(16)
+}
+
 </script>
 
 <template>
