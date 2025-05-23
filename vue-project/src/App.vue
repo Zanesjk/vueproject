@@ -1,6 +1,12 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import { ref, onMounted } from 'vue'
+
+// [Effect 1] Live Clock
+const time = ref(new Date().toLocaleTimeString())
+setInterval(() => { time.value = new Date().toLocaleTimeString() }, 1000)
+
 </script>
 
 <template>
