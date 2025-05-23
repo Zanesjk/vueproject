@@ -29,6 +29,10 @@ function typeEffect() {
 }
 onMounted(typeEffect)
 
+// [Effect 5] Fade-in Message
+const showFade = ref(false)
+onMounted(() => { setTimeout(() => { showFade.value = true }, 500) })
+
 </script>
 
 <template>
