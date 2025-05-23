@@ -13,6 +13,10 @@ function changeColor() {
   color.value = '#'+Math.floor(Math.random()*16777215).toString(16)
 }
 
+// [Effect 3] Counter Button
+const count = ref(0)
+function increment() { count.value++ }
+
 </script>
 
 <template>
